@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>东莞区域 · 9月冲刺现车销售英雄榜</title>
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#05060f;padding:24px;font-family:-apple-system,PingFang SC,Microsoft YaHei,sans-serif;display:flex;justify-content:center;}
+  .page{position:relative;width:900px;max-width:100%;border-radius:20px;overflow:hidden;padding:0 0 20px;
+        background:
+          radial-gradient(900px 520px at 50% -8%, #4a2f00 0%, rgba(74,47,0,0) 62%),
+          radial-gradient(700px 420px at 8% 12%, rgba(255,60,60,.20) 0%, rgba(255,60,60,0) 60%),
+          radial-gradient(700px 420px at 92% 16%, rgba(255,90,0,.16) 0%, rgba(255,90,0,0) 60%),
+          linear-gradient(180deg,#16102a 0%,#0c0a1c 38%,#080711 100%);
+        box-shadow:0 18px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(255,215,120,.22);}
+  body.plain{background:#fff;padding:0;}
+  body.plain .page{box-shadow:none;border-radius:0;}
+
+  /* 放射光束 */
+  .rays{position:absolute;top:-420px;left:50%;width:1700px;height:1700px;margin-left:-850px;pointer-events:none;
+        background:repeating-conic-gradient(from 0deg at 50% 50%,
+          rgba(255,222,140,.20) 0deg 4deg,
+          rgba(255,222,140,0) 4deg 11deg);
+        -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.6) 34%, rgba(0,0,0,0) 66%);
+        mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.6) 34%, rgba(0,0,0,0) 66%);
+        animation:spin 48s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .rays2{position:absolute;top:-300px;left:50%;width:1300px;height:1300px;margin-left:-650px;pointer-events:none;
+        background:repeating-conic-gradient(from 6deg at 50% 50%,
+          rgba(255,255,255,.10) 0deg 2deg,
+          rgba(255,255,255,0) 2deg 16deg);
+        -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.45) 30%, rgba(0,0,0,0) 62%);
+        mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.45) 30%, rgba(0,0,0,0) 62%);
+        animation:spin2 70s linear infinite reverse;}
+  @keyframes spin2{to{transform:rotate(360deg);}}
+
+  /* 顶部聚光 */
+  .glow{position:absolute;top:-150px;left:50%;width:820px;height:430px;margin-left:-410px;pointer-events:none;
+        background:radial-gradient(ellipse at 50% 50%, rgba(255,214,120,.34) 0%, rgba(255,180,60,.13) 38%, rgba(255,150,40,0) 70%);
+        filter:blur(8px);}
+
+  /* 闪烁星点 */
+  .spark{position:absolute;width:10px;height:10px;pointer-events:none;border-radius:50%;
+        background:radial-gradient(circle,#fff 0%,rgba(255,236,170,.95) 32%,rgba(255,200,80,0) 72%);
+        animation:tw 2.6s ease-in-out infinite;}
+  .spark::before,.spark::after{content:'';position:absolute;left:50%;top:50%;border-radius:2px;
+        background:linear-gradient(90deg,rgba(255,240,190,0),rgba(255,240,190,.95),rgba(255,240,190,0));}
+  .spark::before{width:38px;height:1.6px;transform:translate(-50%,-50%);}
+  .spark::after{width:1.6px;height:38px;transform:translate(-50%,-50%);
+        background:linear-gradient(180deg,rgba(255,240,190,0),rgba(255,240,190,.95),rgba(255,240,190,0));}
+  @keyframes tw{0%{opacity:.55;transform:scale(.75) rotate(0deg);}50%{opacity:1;transform:scale(1.15) rotate(45deg);}100%{opacity:.55;transform:scale(.75) rotate(90deg);}}
+
+  header{position:relative;z-index:2;padding:30px 28px 20px;text-align:center;border-bottom:1px solid rgba(255,215,120,.22);
+     background:linear-gradient(180deg, rgba(8,6,18,.46) 0%, rgba(8,6,18,.14) 62%, rgba(8,6,18,0) 100%);}
+  h1{margin:0;font-size:29px;font-weight:900;line-height:1.3;
+     background:linear-gradient(180deg,#fffdf3 0%,#ffe9a0 42%,#ffb61e 78%,#ffd75e 100%);
+     -webkit-background-clip:text;background-clip:text;color:transparent;
+     filter:drop-shadow(0 2px 10px rgba(255,170,40,.55));}
+  .badge{display:inline-block;margin-left:8px;padding:3px 12px;border-radius:20px;font-size:12px;font-weight:800;
+     vertical-align:4px;color:#3a2200;-webkit-text-fill-color:#3a2200;
+     background:linear-gradient(180deg,#ffe082,#ffb300);box-shadow:0 0 14px rgba(255,180,40,.6);}
+  .sub{margin:10px 0 0;font-size:14px;color:#f6dca8;letter-spacing:.5px;}
+
+  .board{position:relative;z-index:2;margin:16px 28px 0;border-radius:14px;overflow:hidden;
+     border:1px solid rgba(255,215,120,.34);
+     background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+     box-shadow:0 8px 26px rgba(0,0,0,.5), 0 0 22px rgba(255,180,60,.10) inset;}
+  .bhead{display:flex;align-items:center;gap:12px;padding:11px 16px;
+     background:linear-gradient(90deg,rgba(255,206,84,.30),rgba(255,206,84,.05));
+     border-bottom:1px solid rgba(255,215,120,.30);}
+  .bdate{font-size:20px;font-weight:900;color:#ffeab4;text-shadow:0 0 12px rgba(255,180,60,.5);}
+  .bwk{font-size:12px;font-weight:800;color:#3a2200;border-radius:6px;padding:2px 9px;
+     background:linear-gradient(180deg,#ffe082,#f0a30c);}
+  .btag{margin-left:auto;font-size:12px;font-weight:700;color:#e8c98a;}
+
+  .list{padding:10px 16px 14px;}
+  .item{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(255,215,120,.20);}
+  .item:last-child{border-bottom:none;}
+  .rk{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+     color:#2b1a00;font-size:15px;font-weight:900;flex:none;}
+  .rk.g1{background:linear-gradient(145deg,#fff3c4,#ffc21e 55%,#ff8f00);box-shadow:0 0 16px rgba(255,190,50,.85),0 0 0 2px rgba(255,240,190,.55) inset;}
+  .rk.g2{background:linear-gradient(145deg,#f2f5fb,#c3cbd9 55%,#8e97a8);box-shadow:0 0 14px rgba(200,215,240,.55);}
+  .rk.g3{background:linear-gradient(145deg,#ffd9a8,#e08c3c 60%,#b96a1e);box-shadow:0 0 14px rgba(230,150,60,.6);}
+  .nm{font-size:19px;font-weight:900;color:#fff;text-shadow:0 0 14px rgba(255,200,90,.45);letter-spacing:1px;}
+  .st{margin-left:auto;font-size:14px;font-weight:800;color:#2b1a00;border-radius:8px;padding:3px 12px;
+     background:linear-gradient(180deg,#ffe082,#f0a30c);box-shadow:0 0 12px rgba(255,180,40,.45);}
+  .st.g2{background:linear-gradient(180deg,#e8edf6,#aab3c4);}
+  .st.g3{background:linear-gradient(180deg,#ffcf9a,#d68232);}
+
+  .item.top{position:relative;margin:4px -6px 4px;padding:10px 6px;border-radius:10px;border-bottom:none;
+     background:linear-gradient(90deg,rgba(255,200,60,.26),rgba(255,200,60,.04));
+     box-shadow:0 0 0 1px rgba(255,220,130,.45) inset;}
+  .item.top::after{content:'';position:absolute;inset:0;border-radius:10px;pointer-events:none;
+     background:linear-gradient(105deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.42) 48%,rgba(255,255,255,0) 62%);
+     animation:shine 3.2s linear infinite;}
+  @keyframes shine{0%{transform:translateX(-120%);}60%,100%{transform:translateX(120%);}}
+
+  .empty{padding:14px 16px;color:#9aa0b8;font-size:14px;font-weight:700;}
+  .pending{border-color:rgba(160,170,200,.35);border-style:dashed;box-shadow:none;}
+  .pending .bhead{background:rgba(255,255,255,.05);border-bottom:1px solid rgba(160,170,200,.22);}
+  .pending .bdate{color:#c9cfdd;text-shadow:none;}
+  .pending .bwk{background:rgba(160,170,200,.35);color:#e8ecf5;}
+  .pending .btag{color:#8e95ab;}
+
+  .foot{position:relative;z-index:2;margin:18px 28px 0;padding:14px 16px;border-radius:12px;text-align:center;
+     font-size:16px;font-weight:900;letter-spacing:1px;color:#3a2200;
+     background:linear-gradient(90deg,#ffcf5c,#ff9d00 50%,#ffcf5c);
+     box-shadow:0 0 26px rgba(255,170,40,.55),0 6px 20px rgba(0,0,0,.45);}
+  .tip{position:relative;z-index:2;margin:12px 28px 0;font-size:12px;color:#8b93ab;text-align:center;}
+  .dlwrap{position:relative;z-index:2;margin:12px 28px 0;text-align:center;}
+  .dl{display:inline-block;padding:9px 20px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;color:#3a2200;
+     background:linear-gradient(180deg,#ffe082,#f0a30c);box-shadow:0 0 16px rgba(255,180,40,.5);}
+  body.plain .dlwrap{display:none;}
+
+  @media (max-width:720px){
+    body{padding:10px;}
+    .page{border-radius:12px;}
+    header{padding:20px 16px 16px;}
+    h1{font-size:21px;}
+    .sub{font-size:12px;}
+    .board{margin:12px 16px 0;}
+    .bhead{padding:9px 12px;gap:8px;}
+    .bdate{font-size:17px;}
+    .list{padding:8px 12px 10px;}
+    .item{gap:9px;padding:7px 0;}
+    .rk{width:27px;height:27px;font-size:13px;}
+    .nm{font-size:16px;}
+    .st{font-size:12px;padding:2px 9px;}
+    .foot{margin:14px 16px 0;padding:11px 12px;font-size:13.5px;}
+    .tip{margin:8px 16px 0;font-size:11px;}
+    .spark::before{width:26px;} .spark::after{height:26px;}
+  }
+</style>
+</head>
+<body>
+<div class='page'>
+  <div class='rays'></div>
+  <div class='rays2'></div>
+  <div class='glow'></div>
+  <div class='spark' style='top:58px;left:78px;animation-delay:-.2s'></div>
+  <div class='spark' style='top:34px;right:96px;animation-delay:-1.1s'></div>
+  <div class='spark' style='top:132px;left:150px;animation-delay:-1.9s'></div>
+  <div class='spark' style='top:96px;right:196px;animation-delay:-.7s'></div>
+  <div class='spark' style='top:186px;left:58px;animation-delay:-1.5s'></div>
+  <div class='spark' style='top:238px;right:66px;animation-delay:-2.3s'></div>
+  <div class='spark' style='top:330px;left:104px;animation-delay:-.9s'></div>
+  <div class='spark' style='top:420px;right:120px;animation-delay:-1.7s'></div>
+  <div class='spark' style='top:560px;left:70px;animation-delay:-2.6s'></div>
+  <div class='spark' style='top:640px;right:78px;animation-delay:-.4s'></div>
+  <div class='spark' style='top:760px;left:130px;animation-delay:-1.3s'></div>
+  <div class='spark' style='top:840px;right:150px;animation-delay:-2.1s'></div>
+  <div class='spark' style='top:940px;left:80px;animation-delay:-.6s'></div>
+  <div class='spark' style='top:1020px;right:90px;animation-delay:-1.8s'></div>
+
+  <header>
+    <h1>东莞区域 · 9月冲刺现车销售英雄榜<span class='badge'>25-30日</span></h1>
+    <p class='sub'>每日现车销售上榜名单 ｜ 当日公布 · 次日清零重排</p>
+  </header>
+
+  <!-- 9/25 周五 -->
+  <section class='board'>
+    <div class='bhead'>
+      <span class='bdate'>9月25日</span><span class='bwk'>周五</span>
+      <span class='btag'>当日上榜 3 人</span>
+    </div>
+    <div class='list'>
+      <div class='item top'><span class='rk g1'>冠</span><span class='nm'>白宸文</span><span class='st'>莞太店</span></div>
+      <div class='item'><span class='rk g2'>亚</span><span class='nm'>伦树明</span><span class='st g2'>寮步店</span></div>
+      <div class='item'><span class='rk g3'>季</span><span class='nm'>莫家声</span><span class='st g3'>虎门店</span></div>
+    </div>
+  </section>
+
+  <!-- 26-30 待公布 -->
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>9月26日</span><span class='bwk'>周六</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日晨会公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>9月27日</span><span class='bwk'>周日</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日晨会公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>9月28日</span><span class='bwk'>周一</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日晨会公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>9月29日</span><span class='bwk'>周二</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日晨会公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>9月30日</span><span class='bwk'>周三</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日晨会公布 · 月末收官战</div>
+  </section>
+
+  <div class='foot'>现车为王 · 今日上榜 · 明日再战 ｜ 东莞区域 9月冲刺</div>
+  <p class='tip'>东莞区域 · 名单以门店当日现车实销为准 ｜ 更新至 2026-09-23</p>
+  <div class='dlwrap'><a class='dl' href='hero-board-september.png' download='东莞区域9月冲刺现车销售英雄榜.png'>保存高清长图（可直接转发）</a></div>
+</div>
+<script>
+  if (location.search.indexOf('plain=1') >= 0) document.body.classList.add('plain');
+</script>
+</body>
+</html>
